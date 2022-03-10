@@ -111,8 +111,8 @@ public class MiniroomController implements Initializable {
 
 	    @FXML
 	    void clickb10(ActionEvent event) {
-	    	array[9]=1;
-	        b10.setStyle("-fx-background-radius: 150; -fx-background-color: blue;");
+	    	 array[9]=1;
+	         b10.setStyle("-fx-background-radius: 150; -fx-background-color: blue;");
 	    }
 
 	    @FXML

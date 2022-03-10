@@ -100,7 +100,14 @@ public class FunctionsController implements Initializable{
 			e.printStackTrace();
 		}
     }else {
-    	
+    	try {
+			mapRoom(movie);
+			Stage stage2 = (Stage) b1.getScene().getWindow();
+			stage2.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     }
     @FXML
@@ -171,9 +178,9 @@ public class FunctionsController implements Initializable{
 			
 			stage.show();
  	}
-	 public void mapRoom() throws Exception{
- 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/FunctionsWindow.fxml"));		
-			loader.setController(new FunctionsController());
+	 public void mapRoom(MovieTheater movie) throws Exception{
+ 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/RoomWindow.fxml"));		
+			loader.setController(new RoomController(movie));
 			Parent parent = (Parent) loader.load();
 			
 			Stage stage = new Stage();
